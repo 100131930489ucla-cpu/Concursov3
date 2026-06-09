@@ -78,6 +78,21 @@ export class Cl_vDirectiva {
   }
 
   /**
+   * Calcula el porcentaje promedio de calificación de todos los concursantes
+   */
+  public calcularPorcentajeCalificacion(aspirantes: Cl_mAspirante[]): number {
+    if (!aspirantes || aspirantes.length === 0) return 0;
+
+    const sumaPorcentajes = aspirantes.reduce((acumulado, aspirante) => {
+      const nota = typeof aspirante.notaDefinitivaCO11 === "function" ? aspirante.notaDefinitivaCO11() : 0;
+      const porcentaje = (Math.max(0, Math.min(nota, 20)) / 20) * 100;
+      return acumulado + porcentaje;
+    }, 0);
+
+    return sumaPorcentajes / aspirantes.length;
+  }
+
+  /**
    * Actualiza el panel lateral derecho con el ganador
    */
   private actualizarDestacado(aspirantes: Cl_mAspirante[], notaMasAltaConcurso: number): void {
