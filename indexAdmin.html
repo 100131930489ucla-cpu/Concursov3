@@ -19,12 +19,12 @@
           
           <div class="row mb-4 border-bottom pb-3">
             <div class="col-md-6">
-              <label class="font-weight-bold">Nombre Completo del Aspirante</label>
-              <input type="text" id="txtNombre" class="form-control" required placeholder="Ej. Juan Pérez">
-            </div>
-            <div class="col-md-6">
               <label class="font-weight-bold">Documento de Identidad (Cédula)</label>
               <input type="number" id="txtCedula" class="form-control" required placeholder="Ej. 12345678">
+            </div>
+            <div class="col-md-6">
+              <label class="font-weight-bold">Nombre Completo del Aspirante</label>
+              <input type="text" id="txtNombre" class="form-control" required placeholder="Ej. Juan Pérez">
             </div>
           </div>
 
@@ -51,27 +51,27 @@
 
             <div class="col-md-3 bg-white p-2 border">
               <strong class="text-secondary small">CO-5.2: Prod. Científica (Máx 15)</strong>
-              <input type="number" id="numLibrosEd" class="form-control form-control-sm mt-1" placeholder="Libros c/Editorial (Max 15)">
-              <input type="number" id="numLibrosSinEd" class="form-control form-control-sm mt-1" placeholder="Libros s/Editorial (Max 12)">
-              <input type="number" id="numArtInd" class="form-control form-control-sm mt-1" placeholder="Art. Indizados (Max 10)">
-              <input type="number" id="numArtNoInd" class="form-control form-control-sm mt-1" placeholder="Art. No Indizados (Max 6)">
-              <input type="number" id="numArtNoArb" class="form-control form-control-sm mt-1" placeholder="Art. No Arbitrados (Max 4)">
-              <input type="number" id="numArtOtros" class="form-control form-control-sm mt-1" placeholder="Otros Artículos (Max 3)">
-              <input type="number" id="numMemCong" class="form-control form-control-sm mt-1" placeholder="Memorias Congreso (Max 10)">
-              <input type="number" id="numPonencias" class="form-control form-control-sm mt-1" placeholder="Ponencias (Max 6)">
-              <input type="number" id="numPatentes" class="form-control form-control-sm mt-1" placeholder="Patentes (Max 15)">
+              <input type="number" id="numLibrosEd" class="form-control form-control-sm mt-1" placeholder="Libros c/Editorial (Max 15)" min="0" max="15">
+              <input type="number" id="numLibrosSinEd" class="form-control form-control-sm mt-1" placeholder="Libros s/Editorial (Max 12)" min="0" max="12">
+              <input type="number" id="numArtInd" class="form-control form-control-sm mt-1" placeholder="Art. Indizados (Max 10)" min="0" max="10">
+              <input type="number" id="numArtNoInd" class="form-control form-control-sm mt-1" placeholder="Art. No Indizados (Max 6)" min="0" max="6">
+              <input type="number" id="numArtNoArb" class="form-control form-control-sm mt-1" placeholder="Art. No Arbitrados (Max 4)" min="0" max="4">
+              <input type="number" id="numArtOtros" class="form-control form-control-sm mt-1" placeholder="Otros Artículos (Max 3)" min="0" max="3">
+              <input type="number" id="numMemCong" class="form-control form-control-sm mt-1" placeholder="Memorias Congreso (Max 10)" min="0" max="10">
+              <input type="number" id="numPonencias" class="form-control form-control-sm mt-1" placeholder="Ponencias (Max 6)" min="0" max="6">
+              <input type="number" id="numPatentes" class="form-control form-control-sm mt-1" placeholder="Patentes (Max 15)" min="0" max="15">
             </div>
 
             <div class="col-md-3 bg-white p-2 border">
               <strong class="text-secondary small">CO-5.3: Experiencia (Máx 20)</strong>
-              <input type="number" id="numDocInvest" class="form-control form-control-sm mt-1" placeholder="Docencia/Invest. (Max 12)">
-              <input type="number" id="numPremDoc" class="form-control form-control-sm mt-1" placeholder="Premios Docencia (Max 8)">
-              <input type="number" id="numExpObj" class="form-control form-control-sm mt-1" placeholder="Exp. Cargo Objeto (Max 6)">
-              <input type="number" id="numExpOtras" class="form-control form-control-sm mt-1" placeholder="Exp. Otras Áreas (Max 3)">
-              <input type="number" id="numPremProf" class="form-control form-control-sm mt-1" placeholder="Premios Prof. (Max 4)">
-              <input type="number" id="numDirInst" class="form-control form-control-sm mt-1" placeholder="Dir. Institutos (Max 6)">
-              <input type="number" id="numPasObj" class="form-control form-control-sm mt-1" placeholder="Pasantías Objeto (Max 4)">
-              <input type="number" id="numPasOtras" class="form-control form-control-sm mt-1" placeholder="Pasantías Otras (Max 2)">
+              <input type="number" id="numDocInvest" class="form-control form-control-sm mt-1" placeholder="Docencia/Invest. (Max 12)" min="0" max="12">
+              <input type="number" id="numPremDoc" class="form-control form-control-sm mt-1" placeholder="Premios Docencia (Max 8)" min="0" max="8">
+              <input type="number" id="numExpObj" class="form-control form-control-sm mt-1" placeholder="Exp. Cargo Objeto (Max 6)" min="0" max="6">
+              <input type="number" id="numExpOtras" class="form-control form-control-sm mt-1" placeholder="Exp. Otras Áreas (Max 3)" min="0" max="3">
+              <input type="number" id="numPremProf" class="form-control form-control-sm mt-1" placeholder="Premios Prof. (Max 4)" min="0" max="4">
+              <input type="number" id="numDirInst" class="form-control form-control-sm mt-1" placeholder="Dir. Institutos (Max 6)" min="0" max="6">
+              <input type="number" id="numPasObj" class="form-control form-control-sm mt-1" placeholder="Pasantías Objeto (Max 4)" min="0" max="4">
+              <input type="number" id="numPasOtras" class="form-control form-control-sm mt-1" placeholder="Pasantías Otras (Max 2)" min="0" max="2">
             </div>
           </div>
 
@@ -93,80 +93,28 @@
           </p>
           
           <div class="row mb-4">
-            <div class="col-md-4 bg-light p-3 border rounded">
-              <h6 class="text-center font-weight-bold text-primary border-bottom pb-1">Jurado A</h6>
-              <div id="contenedorJuradoA">
+            <div class="col-md-12 bg-light p-3 border rounded">
+              <h6 class="text-center font-weight-bold border-bottom pb-1">Jurado</h6>
+              <div id="contenedorJurado">
                 <div class="form-group mb-2">
                   <small class="text-dark d-block font-weight-bold">1. Apariencia y Presencia (Máx 5)</small>
-                  <input type="number" id="crit_A_1" class="form-control form-control-sm" min="1" max="5" value="4" required>
+                  <input type="number" id="crit_1" class="form-control form-control-sm" min="0" max="5" value="0" required>
                 </div>
                 <div class="form-group mb-2">
                   <small class="text-dark d-block font-weight-bold">2. Expresión Verbal y Elocuencia (Máx 5)</small>
-                  <input type="number" id="crit_A_2" class="form-control form-control-sm" min="1" max="5" value="4" required>
+                  <input type="number" id="crit_2" class="form-control form-control-sm" min="0" max="5" value="0" required>
                 </div>
                 <div class="form-group mb-2">
                   <small class="text-dark d-block font-weight-bold">3. Postura y Actitud Profesional (Máx 5)</small>
-                  <input type="number" id="crit_A_3" class="form-control form-control-sm" min="1" max="5" value="4" required>
+                  <input type="number" id="crit_3" class="form-control form-control-sm" min="0" max="5" value="0" required>
                 </div>
                 <div class="form-group mb-2">
                   <small class="text-dark d-block font-weight-bold">4. Dominio Temático Técnico (Máx 5)</small>
-                  <input type="number" id="crit_A_4" class="form-control form-control-sm" min="1" max="5" value="4" required>
+                  <input type="number" id="crit_4" class="form-control form-control-sm" min="0" max="5" value="0" required>
                 </div>
                 <div class="form-group mb-0">
                   <small class="text-dark d-block font-weight-bold">5. Respuestas e Innovación (Máx 5)</small>
-                  <input type="number" id="crit_A_5" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 bg-light p-3 border rounded">
-              <h6 class="text-center font-weight-bold text-success border-bottom pb-1">Jurado B</h6>
-              <div id="contenedorJuradoB">
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">1. Apariencia y Presencia (Máx 5)</small>
-                  <input type="number" id="crit_B_1" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">2. Expresión Verbal y Elocuencia (Máx 5)</small>
-                  <input type="number" id="crit_B_2" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">3. Postura y Actitud Profesional (Máx 5)</small>
-                  <input type="number" id="crit_B_3" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">4. Dominio Temático Técnico (Máx 5)</small>
-                  <input type="number" id="crit_B_4" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-0">
-                  <small class="text-dark d-block font-weight-bold">5. Respuestas e Innovación (Máx 5)</small>
-                  <input type="number" id="crit_B_5" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 bg-light p-3 border rounded">
-              <h6 class="text-center font-weight-bold text-warning border-bottom pb-1">Jurado C</h6>
-              <div id="contenedorJuradoC">
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">1. Apariencia y Presencia (Máx 5)</small>
-                  <input type="number" id="crit_C_1" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">2. Expresión Verbal y Elocuencia (Máx 5)</small>
-                  <input type="number" id="crit_C_2" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">3. Postura y Actitud Profesional (Máx 5)</small>
-                  <input type="number" id="crit_C_3" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-2">
-                  <small class="text-dark d-block font-weight-bold">4. Dominio Temático Técnico (Máx 5)</small>
-                  <input type="number" id="crit_C_4" class="form-control form-control-sm" min="1" max="5" value="4" required>
-                </div>
-                <div class="form-group mb-0">
-                  <small class="text-dark d-block font-weight-bold">5. Respuestas e Innovación (Máx 5)</small>
-                  <input type="number" id="crit_C_5" class="form-control form-control-sm" min="1" max="5" value="4" required>
+                  <input type="number" id="crit_5" class="form-control form-control-sm" min="0" max="5" value="0" required>
                 </div>
               </div>
             </div>
