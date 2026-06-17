@@ -14,6 +14,55 @@ export class Cl_cAdministrativa {
     if (formulario) {
       formulario.addEventListener("submit", (e: Event) => this.registrar(e));
     }
+
+    const btnBuscar = document.getElementById("btnBuscarCedula");
+    const inputBuscar = document.getElementById("txtBusquedaCedula") as HTMLInputElement | null;
+    if (btnBuscar) {
+      btnBuscar.addEventListener("click", () => this.buscarCedula());
+    }
+    if (inputBuscar) {
+      inputBuscar.addEventListener("keydown", (evt: KeyboardEvent) => {
+        if (evt.key === "Enter") {
+          evt.preventDefault();
+          this.buscarCedula();
+        }
+      });
+    }
+  }
+
+  private async buscarCedula(): Promise<void> {
+    const inputBuscar = document.getElementById("txtBusquedaCedula") as HTMLInputElement | null;
+    if (!inputBuscar) return;
+    const cedula = inputBuscar.value.trim();
+    if (!cedula) return;
+
+    try {
+      const response = await fetch(`${this.URL_API}?cedula=${encodeURIComponent(cedula)}`);
+      if (!response.ok) {
+        alert("No se pudo buscar el aspirante.");
+        return;
+      }
+
+      const datos = await response.json();
+      let aspiranteEncontrado = null;
+
+      if (Array.isArray(datos) && datos.length > 0) {
+        aspiranteEncontrado = datos.find((item: any) => String(item.cedula).trim() === cedula) || null;
+      } else if (datos && typeof datos === "object" && "cedula" in datos && String(datos.cedula).trim() === cedula) {
+        aspiranteEncontrado = datos;
+      }
+
+      if (aspiranteEncontrado) {
+        this.vista.cargarFormulario(aspiranteEncontrado);
+      } else {
+        this.vista.limpiarFormulario();
+        this.vista.mostrarFormulario();
+        alert("Cédula no registrada. Complete el formulario para agregar al aspirante.");
+      }
+    } catch (err) {
+      console.error("Error buscando aspirante:", err);
+      alert("No se pudo conectar con el servidor para buscar la cédula.");
+    }
   }
 
   // Se añade explícitamente el tipo ': Promise<void>' exigido por TypeScript en métodos asíncronos
